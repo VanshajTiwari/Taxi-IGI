@@ -21,7 +21,7 @@ export default function Home() {
       </div>
     </header>
     <section className="flex flex-col items-center m-5">
-        <h1 className="text-[50px] ">
+        <h1 className="text-[50px] underline">
               3 SIMPLE STEPS TO BOOK YOUR RIDE
         </h1>
         <article className=" text-gray-400">
@@ -32,7 +32,18 @@ export default function Home() {
               </ol>
         </article>
     </section>
-
+    <section className="flex flex-col items-center m-5">
+      <h1 className="text-[50px] underline">
+        Features
+      </h1>
+      <ol  className="w-[900px] text-gray-400">
+        <li className="border-2 m-2 p-3 w-full border-gray-400">1. Cab Service</li>
+        <li className="border-2 m-2 p-3 w-full border-gray-400">2. Long Tour</li>
+        <li className="border-2 m-2 p-3 w-full border-gray-400">3. Rent</li>
+        <li className="border-2 m-2 p-3 w-full border-gray-400">4. Polling</li>
+        <li className="border-2 m-2 p-3 w-full border-gray-400">5. Other</li>
+      </ol>
+    </section>
     
     
     <Footer/>
