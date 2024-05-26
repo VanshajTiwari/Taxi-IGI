@@ -6,10 +6,11 @@ export const metadata = {
   description: "Project IGI",
 };
 
-export default function Layout({ children }) {
+export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
+    <>
+    <main className="app">{children}</main>
+  </>
+
   );
 }
