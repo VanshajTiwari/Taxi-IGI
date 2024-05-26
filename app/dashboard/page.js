@@ -1,3 +1,4 @@
+'use client';
 import React from 'react'
 import Map from '../Components/map';
 export default function Dashboard(){
@@ -17,11 +18,11 @@ export default function Dashboard(){
 			</div>
 			<div className="app-header-navigation">
 				<div className="tabs">
-					<a href="#">
+					<a href="#" className="active">
 						Overview
 					</a>
-					<a href="#" className="active">
-						Payments
+					<a href="#">
+						Payments Log
 					</a>
 					<a href="#">
 						Cards
@@ -39,7 +40,7 @@ export default function Dashboard(){
 			</div>
 			<div className="app-header-actions">
 				<button className="user-profile">
-					<span>Matheo Peterson</span>
+					<span>Vanshaj Tiwari</span>
 					<span>
 						<img src="https://assets.codepen.io/285131/almeria-avatar.jpeg" />
 					</span>
@@ -78,10 +79,6 @@ export default function Dashboard(){
 					<a href="#">
 						<i className="ph-file-text"></i>
 						<span>Templates</span>
-					</a>
-					<a href="#">
-						<i className="ph-globe"></i>
-						<span>SWIFT</span>
 					</a>
 					<a href="#">
 						<i className="ph-clipboard-text"></i>
