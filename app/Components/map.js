@@ -12,7 +12,7 @@ const customIcon=L.icon({
   iconUrl:"/site/img/mark.png",
   iconSize: [35, 35], 
   iconAnchor: [18, 35], 
-  popupAnchor: [-3, -76]
+  popupAnchor: [-1, -36]
 })
 
 

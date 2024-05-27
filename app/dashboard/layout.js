@@ -9,6 +9,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <main className="app">{children}</main>
   </>
 

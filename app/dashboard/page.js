@@ -1,6 +1,8 @@
-'use client';
+// 'use client';
 import React from 'react'
 import Map from '../Components/map';
+// import { Bell, List, MagnifyingGlass } from '@phosphor-icons/react';
+import { Browsers,Bell, List,CheckSquare, MagnifyingGlass, CaretDown, Lightning, CaretRight, Car, Swap, FileText, ClipboardText, FireSimple, Funnel, Plus, Gear  } from '@phosphor-icons/react/dist/ssr';
 export default function Dashboard(){
   return (
     <>
@@ -25,17 +27,17 @@ export default function Dashboard(){
 						Payments Log
 					</a>
 					<a href="#">
-						Cards
+						Notifications
 					</a>
 					<a href="#">
 						Account
 					</a>
 					<a href="#">
-						System
+						Settings
 					</a>
-					<a href="#">
+					{/* <a href="#">
 						Business
-					</a>
+					</a> */}
 				</div>
 			</div>
 			<div className="app-header-actions">
@@ -47,16 +49,17 @@ export default function Dashboard(){
 				</button>
 				<div className="app-header-actions-buttons">
 					<button className="icon-button large">
-						<i className="ph-magnifying-glass"></i>
+					<MagnifyingGlass />
 					</button>
 					<button className="icon-button large">
-						<i className="ph-bell"></i>
+						
+						<Bell/>
 					</button>
 				</div>
 			</div>
 			<div className="app-header-mobile">
 				<button className="icon-button large">
-					<i className="ph-list"></i>
+					<List/>
 				</button>
 			</div>
 
@@ -65,23 +68,27 @@ export default function Dashboard(){
 			<div className="app-body-navigation">
 				<nav className="navigation">
 					<a href="#">
-						<i className="ph-browsers"></i>
+						<Browsers weight="regular" size={20}/>
 						<span>Dashboard</span>
 					</a>
 					<a href="#">
-						<i className="ph-check-square"></i>
+						{/* <i className="ph-check-square"></i> */}
+						<CheckSquare weight="regular"  size={20}/>
 						<span>Scheduled</span>
 					</a>
 					<a href="#">
-						<i className="ph-swap"></i>
+						{/* <i className="ph-swap"></i> */}
+						<Swap weight="regular"  size={20}/>
 						<span>Transfers</span>
 					</a>
 					<a href="#">
-						<i className="ph-file-text"></i>
+						{/* <i className="ph-file-text"></i> */}
+						<FileText weight="regular"  size={20}/>
 						<span>Templates</span>
 					</a>
 					<a href="#">
-						<i className="ph-clipboard-text"></i>
+						{/* <i className="ph-clipboard-text"></i> */}
+						<ClipboardText weight="regular"  size={20}/>
 						<span>Exchange</span>
 					</a>
 				</nav>
@@ -94,7 +101,7 @@ export default function Dashboard(){
 				</footer>
 			</div>
 
-			<div className="app-body-main-content">
+			<div className="scroll scroll-3 app-body-main-content overflow-auto pr-3" >
 				<section className='mapboc w-full h-1/2'>
 						<Map/>
 				</section>
@@ -102,15 +109,16 @@ export default function Dashboard(){
 					<h2>Service</h2>
 					<div className="service-section-header">
 						<div className="search-field">
-							<i className="ph-magnifying-glass"></i>
-							<input type="text" placeholder="Account number"/>
+							
+							<MagnifyingGlass/>
+							<input type="text" placeholder="Destination"/>
 						</div>
 						<div className="dropdown-field">
 							<select>
 								<option>Home</option>
 								<option>Work</option>
 							</select>
-							<i className="ph-caret-down"></i>
+							<CaretDown/>
 						</div>
 						<button className="flat-button">
 							Search
@@ -124,46 +132,53 @@ export default function Dashboard(){
 					<div className="tiles">
 						<article className="tile">
 							<div className="tile-header">
-								<i className="ph-lightning-light"></i>
+								{/* <i className="ph-lightning-light"></i> */}
+								<Lightning size={36} weight="regular"/>
 								<h3>
-									<span>Electricity</span>
+									<span>Book Your Ride</span>
 									<span>UrkEnergo LTD.</span>
 								</h3>
 							</div>
 							<a href="#">
 								<span>Go to service</span>
 								<span className="icon-button">
-									<i className="ph-caret-right-bold"></i>
+									{/* <i className="ph-caret-right-bold"></i>					 */}
+									<CaretRight size={36} weight="regular"/>
+
 								</span>
 							</a>
 						</article>
 						<article className="tile">
 							<div className="tile-header">
-								<i className="ph-fire-simple-light"></i>
+								{/* <i className="ph-fire-simple-light"></i> */}
+								<FireSimple size={36} weight="regular"/>
 								<h3>
-									<span>Heating Gas</span>
+									<span>Book Your Tour</span>
 									<span>Gazprom UA</span>
 								</h3>
 							</div>
 							<a href="#">
 								<span>Go to service</span>
 								<span className="icon-button">
-									<i className="ph-caret-right-bold"></i>
+									{/* <i className="ph-caret-right-bold"></i> */}
+									<CaretRight weight="regular"/>
 								</span>
 							</a>
 						</article>
 						<article className="tile">
 							<div className="tile-header">
-								<i className="ph-file-light"></i>
+								{/* <i className="ph-file-light"></i> */}
+								<Car size={36} weight="regular"/>
 								<h3>
-									<span>Tax online</span>
+									<span>Polling</span>
 									<span>Kharkov 62 str.</span>
 								</h3>
 							</div>
 							<a href="#">
 								<span>Go to service</span>
 								<span className="icon-button">
-									<i className="ph-caret-right-bold"></i>
+								<CaretRight weight="regular"/>
+									{/* <i className="ph-caret-right-bold"></i> */}
 								</span>
 							</a>
 						</article>
@@ -178,10 +193,12 @@ export default function Dashboard(){
 						<div className="filter-options">
 							<p>Filter selected: more than 100 $</p>
 							<button className="icon-button">
-								<i className="ph-funnel"></i>
+								{/* <i className="ph-funnel"></i> */}
+								<Funnel weight="regular"/>
 							</button>
 							<button className="icon-button">
-								<i className="ph-plus"></i>
+								{/* <i className="ph-plus"></i> */}
+								<Plus weight="regular"/>
 							</button>
 						</div>
 					</div>
@@ -257,7 +274,7 @@ export default function Dashboard(){
 			</div>
 			<div className="app-body-sidebar">
 				<section className="payment-section">
-					<h2>New Payment</h2>
+					<h2>Recent Payments</h2>
 					<div className="payment-section-header">
 						<p>Choose a card to transfer money</p>
 						<div>
@@ -294,7 +311,8 @@ export default function Dashboard(){
 								<div>
 									<span>$ 2,110</span>
 									<button className="icon-button">
-										<i className="ph-caret-right-bold"></i>
+										{/* <i className="ph-caret-right-bold"></i> */}
+										<CaretRight weight="regular"/>
 									</button>
 								</div>
 							</div>
@@ -311,7 +329,8 @@ export default function Dashboard(){
 								<div>
 									<span>$ 5,621</span>
 									<button className="icon-button">
-										<i className="ph-caret-right-bold"></i>
+										{/* <i className="ph-caret-right-bold"></i> */}
+										<CaretRight weight="regular"/>
 									</button>
 								</div>
 							</div>
@@ -328,7 +347,8 @@ export default function Dashboard(){
 								<div>
 									<span>$ 3,473</span>
 									<button className="icon-button">
-										<i className="ph-caret-right-bold"></i>
+										{/* <i className="ph-caret-right-bold"></i> */}
+										<CaretRight weight="regular"/>
 									</button>
 								</div>
 							</div>
@@ -346,7 +366,8 @@ export default function Dashboard(){
 							Save
 						</button>
 						<button className="settings-button">
-							<i className="ph-gear"></i>
+							{/* <i className="ph-gear"></i> */}
+							<Gear/>
 							<span>More settings</span>
 						</button>
 					</div>
