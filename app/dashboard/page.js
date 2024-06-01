@@ -1,9 +1,22 @@
 // 'use client';
 import React from 'react'
 import Map from '../Components/map';
+// import React from 'react';
+import moment from 'moment';
+import Heatmap from './Components/Heatmap';
 // import { Bell, List, MagnifyingGlass } from '@phosphor-icons/react';
 import { Browsers,Bell, List,CheckSquare, MagnifyingGlass, CaretDown, Lightning, CaretRight, Car, Swap, FileText, ClipboardText, FireSimple, Funnel, Plus, Gear  } from '@phosphor-icons/react/dist/ssr';
 export default function Dashboard(){
+	    // 1 year range
+		let startDate = moment().add(-365, 'days');
+		let dateRange = [startDate, moment()];
+	
+		let data = Array.from(new Array(365)).map((_, index) => {
+		  return {
+			date: moment(startDate).add(index, 'day'),
+			value: Math.floor(Math.random() * 100)
+		  };
+		});
   return (
     <>
 		<header className="app-header">
