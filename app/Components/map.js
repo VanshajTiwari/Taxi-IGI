@@ -5,6 +5,7 @@ import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility
 import "leaflet-defaulticon-compatibility";
 import { useEffect, useState } from "react";
 
+
 function calculateRadius(zoom) {
   return 1000 * Math.pow(2, 13 - zoom);
 }
@@ -20,10 +21,10 @@ const customIcon=L.icon({
 
 const Map = () => {
   const [pos,setPos]=useState([28.70405920,77.10249020]);
-
   function handleChangePositionfn(nwltln){
     setPos(nwltln);
   }
+ 
   return (
     <MapContainer center={pos}
     zoom={14}

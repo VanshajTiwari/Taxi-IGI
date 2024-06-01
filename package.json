@@ -9,11 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/styled": "^11.11.5",
+    "@mui/x-charts": "^7.6.1",
     "@phosphor-icons/react": "^2.1.5",
     "@react-leaflet/core": "^2.1.0",
+    "ioredis": "^5.4.1",
     "leaflet": "^1.9.4",
     "leaflet-defaulticon-compatibility": "^0.1.2",
     "leaflet-geosearch": "^4.0.0",
+    "mdb-react-ui-kit": "^8.0.0",
     "next": "^14.2.3",
     "react": "^18",
     "react-dom": "^18",
