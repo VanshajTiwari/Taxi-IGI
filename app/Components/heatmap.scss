@@ -1,6 +1,6 @@
-$cell-height : 10px;
-$cell-width : 10px;
-$cell-margin:2px;
+$cell-height : 15.5px;
+$cell-width : 15.5px;
+$cell-margin:2.5px;
 $cell-weekdays-width: 30px;
 
 html {
@@ -29,8 +29,8 @@ html, body {
     &-month {
       width: $cell-width;
       margin: $cell-margin;
-      border: 1px solid transparent;
-      font-size: 10px;
+      border: 10px solid transparent;
+      font-size: 15px;
     }
 
     .Jan~.Jan,
@@ -58,11 +58,14 @@ html, body {
       width: $cell-weekdays-width;
 
       &-weekday {
-        font-size: 10px;
-        height: $cell-height;
-        border: 1px solid transparent;
-        margin: $cell-margin;
+        font-size: 15px;
+        height: 15px;
+        border: 0px solid transparent;
+        margin-bottom:5.5px;
         vertical-align: middle;
+        position: relative;
+        top:-23px;
+        left: -10px;;
       }
     }
 
@@ -70,7 +73,7 @@ html, body {
       display: inline-flex;
       flex-direction: column;
       flex-wrap: wrap;
-      height: #{(10 + 4) * 8}px;
+      height: #{(11 + 5) * 8}px;
 
       &-cell {
         height: $cell-height;

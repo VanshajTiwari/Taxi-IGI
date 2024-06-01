@@ -4,8 +4,12 @@ import './heatmap.scss'; // Adjust the path as needed
 
 const DayNames = {
   1: 'Mon',
+  2: 'Tue',
   3: 'Wed',
-  5: 'Fri'
+  4: 'Thu',
+  5: 'Fri',
+  6: 'sat',
+  7 : 'Sun'
 }
 
 function Cell({ color }) {
