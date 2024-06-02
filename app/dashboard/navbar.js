@@ -1,4 +1,5 @@
 import { MagnifyingGlass, Bell, List } from "@phosphor-icons/react/dist/ssr"
+import Link from "next/link"
 export default function DashboardNav(){
   return (
     <>
@@ -19,9 +20,9 @@ export default function DashboardNav(){
 					<a href="#" className="active">
 						Overview
 					</a>
-					<a href="#">
+					<Link href="/dashboard/paymentlog">
 						Payments Log
-					</a>
+					</Link>
 					<a href="#">
 						Notifications
 					</a>
@@ -37,12 +38,12 @@ export default function DashboardNav(){
 				</div>
 			</div>
 			<div className="app-header-actions">
-				<button className="user-profile">
+				<Link href="/Profile" className="user-profile">
 					<span>Vanshaj Tiwari</span>
 					<span>
 						<img src="https://assets.codepen.io/285131/almeria-avatar.jpeg" />
 					</span>
-				</button>
+				</Link>
 				<div className="app-header-actions-buttons">
 					<button className="icon-button large">
 					<MagnifyingGlass />
