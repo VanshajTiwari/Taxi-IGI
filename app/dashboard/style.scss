@@ -240,6 +240,11 @@ a {
 	justify-content: center;
 	width: 32px;
 	height: 32px;
+	margin-right: 8px;
+	img{
+		transform: scale(2.5);
+		
+	}
 }
 
 .logo-title {
@@ -685,7 +690,6 @@ a {
 .transfers {
 	display: flex;
 	flex-direction: column;
-	margin-top: 1.5rem;
 }
 
 .transfer {
@@ -697,9 +701,7 @@ a {
 		align-items: flex-start;
 		flex-direction: column;
 	}
-	& + * {
-		margin-top: 2rem;
-	}
+
 }
 
 .transfer-logo {
@@ -710,8 +712,9 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	overflow: hidden;
 	img {
-		width: 45%;
+		transform: scale(1.2);
 	}
 }
 
@@ -771,6 +774,7 @@ a {
 	display: flex;
 	align-items: center;
 	margin-top: 1rem;
+	
 	p {
 		color: var(--c-text-tertiary);
 		font-size: 0.875rem;

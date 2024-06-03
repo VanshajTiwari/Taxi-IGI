@@ -1,8 +1,9 @@
 // import Map from "./../Components/map";
-import { Browsers,Bell, List,CheckSquare, MagnifyingGlass, CaretDown, Lightning, CaretRight, Car, Swap, FileText, ClipboardText, FireSimple, Funnel, Plus, Gear  } from '@phosphor-icons/react/dist/ssr';
-import DashboardNav from './navbar';
+import {  MagnifyingGlass, CaretDown, Lightning, CaretRight, Car,  FireSimple,  Gear  } from '@phosphor-icons/react/dist/ssr';
+import DashboardNav from './topNav';
 import redis from "ioredis";
 import dynamic from "next/dynamic";
+import SideNav from './sideNav';
 const Map =dynamic(()=>import("../Components/map"),{ssr:false});
 export function Dashboard(){
 // 	const client = redis.createClient({
@@ -20,41 +21,7 @@ export function Dashboard(){
     <>
         <DashboardNav/>
 		<div className="app-body">
-			<div className="app-body-navigation">
-				<nav className="navigation">
-					<a href="#">
-						<Browsers weight="regular" size={20}/>
-						<span>Dashboard</span>
-					</a>
-					<a href="#">
-						{/* <i className="ph-check-square"></i> */}
-						<CheckSquare weight="regular"  size={20}/>
-						<span>Scheduled</span>
-					</a>
-					<a href="#">
-						{/* <i className="ph-swap"></i> */}
-						<Swap weight="regular"  size={20}/>
-						<span>Transfers</span>
-					</a>
-					<a href="#">
-						{/* <i className="ph-file-text"></i> */}
-						<FileText weight="regular"  size={20}/>
-						<span>Templates</span>
-					</a>
-					<a href="#">
-						{/* <i className="ph-clipboard-text"></i> */}
-						<ClipboardText weight="regular"  size={20}/>
-						<span>Exchange</span>
-					</a>
-				</nav>
-				<footer className="footer">
-					<h1>Taxi IGI<small>©</small></h1>
-					<div>
-						Project IGI ©<br />
-						All Rights Reserved 2024
-					</div>
-				</footer>
-			</div>
+			<SideNav/>
 
 			<div className="scroll scroll-3 app-body-main-content overflow-auto pr-3" >
 				<section className='mapboc w-full h-1/2'>

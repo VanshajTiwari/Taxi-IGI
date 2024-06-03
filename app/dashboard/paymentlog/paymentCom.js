@@ -45,7 +45,7 @@ export default function PaymentCom(){
     // )}
     // </div>
     <section className="transfer-section w-full">
-					<div className="transfer-section-header">
+					<div className="transfer-section-header mb-2">
 						<h2>Latest transfers</h2>
 						<div className="filter-options">
 							<p>Filter selected: more than 100 $</p>
@@ -59,19 +59,19 @@ export default function PaymentCom(){
 							</button>
 						</div>
 					</div>
-					<div className="transfers">
-						<div className="transfer">
+					<div className="transfers flex flex-col gap-y-3">
+						<div className="transfer  shadow bg-gray-800 p-4 rounded-lg">
 							<div className="transfer-logo">
-								<img src="https://assets.codepen.io/285131/apple.svg" />
+								<img src="https://cdn4.iconfinder.com/data/icons/aiga-symbol-signs/612/aiga_taxi_bg-512.png" />
 							</div>
 							<dl className="transfer-details">
 								<div>
-									<dt>Apple Inc.</dt>
-									<dd>Apple ID Payment</dd>
+									<dt>Rajesh Kumar</dt>
+									<dd>*********4012</dd>
 								</div>
 								<div>
-									<dt>4012</dt>
-									<dd>Last four digits</dd>
+									<dt>To : Chatikara</dt>
+									<dd>From : prem Mandir</dd>
 								</div>
 								<div>
 									<dt>28 Oct. 21</dt>
@@ -79,21 +79,21 @@ export default function PaymentCom(){
 								</div>
 							</dl>
 							<div className="transfer-number">
-								- $ 550
+								- &#x20b9; 550
 							</div>
 						</div>
-						<div className="transfer">
+						<div className="transfer shadow bg-gray-800 p-4 rounded-lg">
 							<div className="transfer-logo">
-								<img src="https://assets.codepen.io/285131/pinterest.svg" />
+								<img src="https://cdn4.iconfinder.com/data/icons/aiga-symbol-signs/612/aiga_taxi_bg-512.png" />
 							</div>
 							<dl className="transfer-details">
 								<div>
-									<dt>Pinterest</dt>
-									<dd>2 year subscription</dd>
+									<dt>Pushpa Devi</dt>
+									<dd>*********4512</dd>
 								</div>
 								<div>
-									<dt>5214</dt>
-									<dd>Last four digits</dd>
+									<dt>To : Chatikara</dt>
+									<dd>From : prem Mandir</dd>
 								</div>
 								<div>
 									<dt>26 Oct. 21</dt>
@@ -101,21 +101,21 @@ export default function PaymentCom(){
 								</div>
 							</dl>
 							<div className="transfer-number">
-								- $ 120
+								- &#x20b9; 120
 							</div>
 						</div>
-						<div className="transfer">
+						<div className="transfer  shadow bg-gray-800 p-4 rounded-lg">
 							<div className="transfer-logo">
-								<img src="https://assets.codepen.io/285131/warner-bros.svg" />
+								<img src="/site/img/134187_taxi_car_icon.svg"  className="w-full h-full"/>
 							</div>
 							<dl className="transfer-details">
 								<div>
-									<dt>Warner Bros.</dt>
-									<dd>Cinema</dd>
+									<dt>Danny E</dt>
+									<dd>************2345</dd>
 								</div>
 								<div>
-									<dt>2228</dt>
-									<dd>Last four digits</dd>
+									<dt>To : Chatikara</dt>
+									<dd>From : prem Mandir</dd>
 								</div>
 								<div>
 									<dt>22 Oct. 21</dt>
@@ -123,7 +123,7 @@ export default function PaymentCom(){
 								</div>
 							</dl>
 							<div className="transfer-number">
-								- $ 70
+								- &#x20b9; 70
 							</div>
 						</div>
 					</div>

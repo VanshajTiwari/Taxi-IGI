@@ -1,13 +1,23 @@
-import { MagnifyingGlass, Bell, List } from "@phosphor-icons/react/dist/ssr"
-import Link from "next/link"
-export default function DashboardNav(){
+"use client";
+import { MagnifyingGlass, Bell, List } from "@phosphor-icons/react/dist/ssr";
+import Link from "next/link";
+import Image from "next/image";
+import {  usePathname } from "next/navigation";
+import { useEffect } from "react";
+export default function TopNavbar(){
+	const route=usePathname();
+	useEffect(()=>{
+
+		// 
+	},[]);
   return (
     <>
             <header className="app-header">
 			<div className="app-header-logo">
 				<div className="logo">
 					<span className="logo-icon">
-						<img src="https://assets.codepen.io/285131/almeria-logo.svg" />
+						{/* <img src="https://assets.codepen.io/285131/almeria-logo.svg" /> */}
+						<Image  src="/site/img/view-3d-car_23-2150998595-removebg-preview.png" alt="logo" width={400} height={400} className=""/>
 					</span>
 					<h1 className="logo-title">
 						<span>Taxi IGI</span>
@@ -17,10 +27,10 @@ export default function DashboardNav(){
 			</div>
 			<div className="app-header-navigation">
 				<div className="tabs">
-					<a href="#" className="active">
+					<Link href="/dashboard" className={route=="/dashboard"?"active":""}>
 						Overview
-					</a>
-					<Link href="/dashboard/paymentlog">
+					</Link>
+					<Link href="/dashboard/paymentlog" className={route=="/dashboard/paymentlog"?"active":""}>
 						Payments Log
 					</Link>
 					<a href="#">
