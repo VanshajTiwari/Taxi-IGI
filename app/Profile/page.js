@@ -1,11 +1,12 @@
 'use client';
-// import { PieChart } from "@mui/x-charts";
+import { PieChart } from "@mui/x-charts";
 // import Card from "./card";
 import moment from 'moment';
 import Heatmap from '../Components/Heatmap';
 // import { Dashboard } from "../dashboard/dashboard";
 import SideNav from "../dashboard/sideNav";
 import TopNavbar from "../dashboard/topNav";
+import Image from "next/image";
 import "../dashboard/style.scss";
 export default function Page(){
   let startDate = moment().add(-365, 'days');
@@ -19,42 +20,67 @@ export default function Page(){
   });
   return(
     <>
-      <div className="app-body" style={{width:"100%"}}>
+      <div className="app-body" style={{width:"100%",paddingLeft:"100px",paddingBottom:"20px",backgroundColor:"#1f1f1f"}}>
+        
         <SideNav/>
+       
         <div className="scroll scroll-3 app-body-main-content overflow-auto pr-3" >
+            <nav className="">			
+              <div className="app-header-logo">
+                <div className=" flex justify-center">
+                  <span className="">
+                    {/* <img src="https://assets.codepen.io/285131/almeria-logo.svg" /> */}
+                    <Image  src="/site/img/view-3d-car_23-2150998595-removebg-preview.png" alt="logo" width={120} height={120} className=""/>
+                  </span>
+                  <h1 className="logo-title text-[30px]">
+                    <span>Taxi IGI</span>
+                    <span className='text-[15px]'>Powered by Project IGI</span>
+                  </h1>
+                </div>
+              </div>
+            </nav>
 				<section className="w-full">
 					<h2>Profile Details</h2>
 
 					<div className="tiles">
 
 						<article className="tile">
-							<div className="tile-header">
-								{/* <i className="ph-fire-simple-light"></i> */}
-								{/* <FireSimple size={36} weight="regular"/> */}
-								<h3>
-									<span>Book Your Tour</span>
-									<span>Gazprom UA</span>
-								</h3>
+              <div className='flex flex-col items-center'>
+                <div className="tile-header flex justify-center items-center min-h-[200px] ">
+                  <img src='https://cdn-icons-png.flaticon.com/512/2202/2202112.png' width={140} height={140}/>
+                  <h3 className="text-[20px]">
+                    <span>Vanshaj Tiwari</span>
+                    <span>vanshajtiwari62@gmail.com</span>
+                  </h3>
+                </div>
 							</div>
 							<a href="#">
-								<span>Go to service</span>
-								<span className="icon-button">
-									{/* <i className="ph-caret-right-bold"></i> */}
-									{/* <CaretRight weight="regular"/> */}
-								</span>
+								<span>Update Details</span>
 							</a>
 						</article>
             <article className="tile">
-							<div className="tile-header">
+							<div className="flex flex-col">
 								{/* <i className="ph-fire-simple-light"></i> */}
 								{/* <FireSimple size={36} weight="regular"/> */}
-								<h3>
-									<span>Book Your Tour</span>
-									<span>Gazprom UA</span>
+                <h3 className='border-b-2 border-black grid-cols-2'>
+									<span  className='font-bold'>verified : </span>
+									<span>NO</span>
+								</h3>
+								<h3 className='border-b-2 border-black  grid-cols-2'>
+									<span className='font-bold'>Address : </span>
+									<span>Vrindavan,Mathura</span>
+								</h3>
+                <h3 className='border-b-2 border-black  grid-cols-2'>
+									<span  className='font-bold'>Active Since :</span>
+									<span>2023</span>
+								</h3>
+                <h3 className='border-b-2 border-black  grid-cols-2'>
+									<span  className='font-bold'>Logged on :</span>
+									<span>Poco M2 pro</span>
 								</h3>
 							</div>
 							<a href="#">
-								<span>Go to service</span>
+								<span>Edit</span>
 								<span className="icon-button">
 									{/* <i className="ph-caret-right-bold"></i> */}
 									{/* <CaretRight weight="regular"/> */}
@@ -62,16 +88,37 @@ export default function Page(){
 							</a>
 						</article>
 						<article className="tile">
-							<div className="tile-header">
-								{/* <i className="ph-file-light"></i> */}
-								{/* <Car size={36} weight="regular"/> */}
-								<h3>
-									<span>Polling</span>
-									<span>Kharkov 62 str.</span>
-								</h3>
+							<div className="">
+                <div className='flex justify-center text-[20px]'>
+                      <span className="no-wrap">Total Travel : </span>&nbsp;
+                      <span>99</span>
+                      
+                    </div>
+                    
+                    <div className="w-full h-full">
+                    <PieChart
+                        
+                          series={[
+                            {
+                              data: [
+                                { id: 0, value: 10, label: 'Ride Booked',color:"yellow"},
+                                { id: 1, value: 15, label: 'Tour' },
+                                { id: 2, value: 20, label: 'Polling' },
+                              ],
+                              innerRadius: 30,
+                              outerRadius: 100,
+                            
+                              paddingAngle: 5,
+                              cornerRadius: 5,
+                            },
+                          ]}
+                          width={400}
+                          height={200}
+                        />
+                    </div>
 							</div>
 							<a href="#">
-								<span>Go to service</span>
+								<span>Stats</span>
 								<span className="icon-button">
 								{/* <CaretRight weight="regular"/> */}
 									{/* <i className="ph-caret-right-bold"></i> */}
@@ -79,6 +126,9 @@ export default function Page(){
 							</a>
 						</article>
 					</div>
+            <article className="tile" style={{backgroundColor:"#dad7cd",marginTop:"20px"}}>
+            <Heatmap range={dateRange} data={data} colorFunc={({ alpha }) => `rgba(3, 160, 3, ${alpha})`} />
+            </article>
 
 				</section>
 				
@@ -105,33 +155,7 @@ export default function Page(){
                 
   //               <div className='w-full bg-white  rounded-md text-black my-4 p-2 shadow flex flex-col items-center justify-center '>
                 
-  //                   <div className='flex text-[20px] mb-2'>
-  //                     <span>Total Travel : </span>&nbsp;
-  //                     <span>99</span>
-                      
-  //                   </div>
-                    
-  //                   <div className="w-full h-full">
-  //                   {/* <PieChart
-                        
-  //                         series={[
-  //                           {
-  //                             data: [
-  //                               { id: 0, value: 10, label: 'Ride Booked',color:"yellow"},
-  //                               { id: 1, value: 15, label: 'Tour' },
-  //                               { id: 2, value: 20, label: 'Polling' },
-  //                             ],
-  //                             innerRadius: 30,
-  //                             outerRadius: 100,
-                            
-  //                             paddingAngle: 5,
-  //                             cornerRadius: 5,
-  //                           },
-  //                         ]}
-  //                         width={400}
-  //                         height={200}
-  //                       /> */}
-  //                   </div>
+
   //               </div>
   //           </div>
   //           <div className="w-3/4">
@@ -168,7 +192,7 @@ export default function Page(){
   //                   {/* <Card/> */}
   //               </div>
   //             </div>
-  //             {/* <div className="w-full flex justify-center items-center"><Heatmap range={dateRange} data={data} colorFunc={({ alpha }) => `rgba(3, 160, 3, ${alpha})`} /></div> */}
+  //             {/* <div className="w-full flex justify-center items-center"></div> */}
   //           </div>
   //         </div>
   //       </div>

@@ -15,11 +15,7 @@ const PaymentLogPage = () => {
             <DashboardNav/>
             <div className="app-body">
                 <SideNav/>
-                <div className='w-[1200px] flex justify-center'>
-                    <PaymentCom/>
-                </div>
-
-           
+                <PaymentCom/>    
          </div>
         </>
     );
