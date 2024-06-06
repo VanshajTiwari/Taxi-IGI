@@ -4,6 +4,8 @@ import DashboardNav from './topNav';
 import redis from "ioredis";
 import dynamic from "next/dynamic";
 import SideNav from './sideNav';
+import { Autocomplete } from '@nextui-org/react';
+import AutoComeplete from '../Components/autoComplete';
 const Map =dynamic(()=>import("../Components/map"),{ssr:false});
 export function Dashboard(){
 // 	const client = redis.createClient({
@@ -30,13 +32,13 @@ export function Dashboard(){
 				<section className="service-section">
 					<h2>Service</h2>
 					<div className="service-section-header">
-						<div className="search-field">
+						<div className="search-field flex ">
 							
-							<MagnifyingGlass size={30} />
-							<input type="text" placeholder="Destination"/>
+							<MagnifyingGlass size={30} className='pr-2'/>
+							<AutoComeplete/>
 						</div>
 						<div className="dropdown-field">
-							<select>
+							<select className=''>
 								<option>Home</option>
 								<option>Work</option>
 							</select>

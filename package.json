@@ -12,6 +12,7 @@
     "@emotion/cache": "^11.11.0",
     "@emotion/styled": "^11.11.5",
     "@mui/x-charts": "^7.6.1",
+    "@nextui-org/react": "^2.4.1",
     "@phosphor-icons/react": "^2.1.5",
     "@react-leaflet/core": "^2.1.0",
     "@stripe/stripe-js": "^3.4.1",

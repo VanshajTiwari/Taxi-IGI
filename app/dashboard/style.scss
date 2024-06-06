@@ -292,10 +292,13 @@ a {
 		}
 	}
 }
-
+.active-sidetab{
+	transform: translateX(4px);
+	color: var(--c-text-primary);
+}
 .tabs {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	color: var(--c-text-tertiary);
 	border-bottom: 1px solid var(--c-gray-600);
 

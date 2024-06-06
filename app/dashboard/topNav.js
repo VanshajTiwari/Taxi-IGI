@@ -33,15 +33,15 @@ export default function TopNavbar(){
 					<Link href="/dashboard/paymentlog" className={route=="/dashboard/paymentlog"?"active":""}>
 						Payments Log
 					</Link>
-					<a href="#">
+					<Link href="/dashboard/notifications" className={route=="/dashboard/notifications"?"active":""}>
 						Notifications
-					</a>
-					<a href="#">
+					</Link>
+					{/* <a href="#">
 						Account
 					</a>
 					<a href="#">
 						Settings
-					</a>
+					</a> */}
 					{/* <a href="#">
 						Business
 					</a> */}
