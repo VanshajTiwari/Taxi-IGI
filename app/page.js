@@ -3,6 +3,7 @@ import { Nav } from "./Components/navbar";
 import { Footer } from "./Components/Footer";
 import Link from "next/link";
 
+
 export default function Home() {
   return (
     <main className="">

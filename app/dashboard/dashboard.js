@@ -4,10 +4,10 @@ import DashboardNav from './topNav';
 import redis from "ioredis";
 import dynamic from "next/dynamic";
 import SideNav from './sideNav';
-import { Autocomplete } from '@nextui-org/react';
 import AutoComeplete from '../Components/autoComplete';
 const Map =dynamic(()=>import("../Components/map"),{ssr:false});
-export function Dashboard(){
+
+export function Dashboard(){ 
 // 	const client = redis.createClient({
 // 		host: 'localhost', // or the appropriate host if Redis is not running locally
 // 		port: 6379,        // default port for Redis
@@ -35,7 +35,7 @@ export function Dashboard(){
 						<div className="search-field flex ">
 							
 							<MagnifyingGlass size={30} className='pr-2'/>
-							<AutoComeplete/>
+							<AutoComeplete />
 						</div>
 						<div className="dropdown-field">
 							<select className=''>
@@ -85,7 +85,7 @@ export function Dashboard(){
 								<span>Go to service</span>
 								<span className="icon-button">
 									{/* <i className="ph-caret-right-bold"></i> */}
-									<CaretRight weight="regular"/>
+									<CaretRight size={36} weight="regular"/>
 								</span>
 							</a>
 						</article>
@@ -101,7 +101,7 @@ export function Dashboard(){
 							<a href="#">
 								<span>Go to service</span>
 								<span className="icon-button">
-								<CaretRight weight="regular"/>
+								<CaretRight size={36} weight="regular"/>
 									{/* <i className="ph-caret-right-bold"></i> */}
 								</span>
 							</a>

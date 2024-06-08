@@ -50,8 +50,8 @@ export default function TopNavbar(){
 			<div className="app-header-actions">
 				<Link href="/Profile" className="user-profile">
 					<span>Vanshaj Tiwari</span>
-					<span>
-						<img src="https://assets.codepen.io/285131/almeria-avatar.jpeg" />
+					<span className="w-[50px] h-[50px]">
+						<img src='https://cdn-icons-png.flaticon.com/512/2202/2202112.png' className="object-cover"/>
 					</span>
 				</Link>
 				<div className="app-header-actions-buttons">
