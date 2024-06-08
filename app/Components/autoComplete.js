@@ -8,7 +8,7 @@ export default function AutoComeplete() {
       <div className="dropdown-field">
 							<select>
               {
-                animals.map((e)=><option>e</option>)
+                animals.map((e)=><option key={e}>e</option>)
               }
                 <option>None</option>
 							</select>
