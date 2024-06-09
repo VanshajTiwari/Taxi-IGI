@@ -3,28 +3,28 @@
 import { CaretDown } from "@phosphor-icons/react/dist/ssr";
 import { getData } from "../API/locationSuggestion";
 import { useEffect, useState } from "react";
-export default function AutoComeplete() {
-    const [locationSuggestion,setlocationSuggestion]=useState([]);
-    const [keyword,setKeyword]=useState("");
-    const [selectedLocation,setSelectedLocation]=useState("");
+export default function AutoComplete() {
+  const [locationSuggestion,setlocationSuggestion]=useState([]);
+  const [keyword,setKeyword]=useState("");
+  const [selectedLocation,setSelectedLocation]=useState("");
+  function getLocationObject(value){
+    console.log("clickde");
+    setKeyword(value);
+  }
     useEffect(()=>{
       async function fetchDataCountry(location=""){
           setlocationSuggestion(await getData(location));
       }
       fetchDataCountry(keyword);
     },[keyword]);
+
+
   return (
-    <div className="flex w-full">
-      <div className="dropdown-field">
-              <input value={keyword} onChange={(e)=>setKeyword(e.target.value)} className=" max-w-[5px]"/>
-							<select className=" overflow-hidden" onChange={(e)=>{setSelectedLocation(JSON.parse(e.target.value))}}>
-              {
-                locationSuggestion.map((e)=><option key={e.place_id} value={JSON.stringify(e)} className="">{e.display_name}</option>)
-              }
-                <option> </option>
-							</select>
-							<CaretDown/>
-						</div>
-    </div>
+    <div className='text-red-300 bg-black'>
+      <input value={keyword} onChange={e=>setKeyword(e.target.value)}/><MagnifyingGlass size={30} className='pr-2'/>
+      <div className='flex flex-col'>
+        {locationSuggestion.map(location=><span key={location.place_id} value={JSON.stringify(location)} onClick={(e)=>getLocationObject(e.target.innerHTML)} className=" z-[1000]">{location.display_name}</span>)}
+      </div>
+      </div>
   );
 }

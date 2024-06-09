@@ -1,11 +1,12 @@
-// import Map from "./../Components/map";
-import {  MagnifyingGlass, CaretDown, Lightning, CaretRight, Car,  FireSimple,  Gear  } from '@phosphor-icons/react/dist/ssr';
+import {  MagnifyingGlass, Lightning,CaretRight, Car,  FireSimple,  Gear  } from '@phosphor-icons/react/dist/ssr';
 import DashboardNav from './topNav';
-import redis from "ioredis";
 import dynamic from "next/dynamic";
 import SideNav from './sideNav';
-import AutoComeplete from '../Components/autoComplete';
+import AutoComplete from '../Components/autoComplete';
 const Map =dynamic(()=>import("../Components/map"),{ssr:false});
+
+
+
 
 export function Dashboard(){ 
 // 	const client = redis.createClient({
@@ -35,14 +36,10 @@ export function Dashboard(){
 						<div className="search-field flex ">
 							
 							<MagnifyingGlass size={30} className='pr-2'/>
-							<AutoComeplete />
+							<AutoComplete />
 						</div>
-						<div className="dropdown-field">
-							<select className=''>
-								<option>Home</option>
-								<option>Work</option>
-							</select>
-							<CaretDown/>
+						<div className="search-field">
+							<AutoComplete/>
 						</div>
 						<button className="flat-button">
 							Search
@@ -219,3 +216,5 @@ export function Dashboard(){
     </>
   )
 }
+
+
