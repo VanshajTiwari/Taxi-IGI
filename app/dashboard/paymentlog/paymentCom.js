@@ -1,6 +1,6 @@
 "use client";
 import { useState,useEffect } from 'react';
-import { Browsers,Bell, List,CheckSquare, MagnifyingGlass, CaretDown, Lightning, CaretRight, Car, Swap, FileText, ClipboardText, FireSimple, Funnel, Plus, Gear  } from '@phosphor-icons/react/dist/ssr';
+import {Car,Funnel, Plus  } from '@phosphor-icons/react/dist/ssr';
 export default function PaymentCom(){
     const samplePaymentLogs = [
         { id: 1, date: '2024-01-01', amount: 50.00, method: 'Credit Card' },
@@ -60,9 +60,9 @@ export default function PaymentCom(){
 						</div>
 					</div>
 					<div className="transfers flex flex-col gap-y-3">
-						<div className="transfer  shadow bg-gray-800 p-4 rounded-lg">
-							<div className="transfer-logo">
-								<img src="https://cdn4.iconfinder.com/data/icons/aiga-symbol-signs/612/aiga_taxi_bg-512.png" />
+						<div className="transfer  shadow bg-[#2e2e2e] p-4 rounded-lg">
+							<div className="transfer-logo scale-125">
+								<Car size={36} weight="regular"  className='bg-[#1f1f1f] w-full h-full p-2'/>
 							</div>
 							<dl className="transfer-details">
 								<div>
@@ -82,9 +82,9 @@ export default function PaymentCom(){
 								- &#x20b9; 550
 							</div>
 						</div>
-						<div className="transfer shadow bg-gray-800 p-4 rounded-lg">
-							<div className="transfer-logo">
-								<img src="https://cdn4.iconfinder.com/data/icons/aiga-symbol-signs/612/aiga_taxi_bg-512.png" />
+						<div className="transfer shadow bg-[#2e2e2e] p-4 rounded-lg">
+							<div className="transfer-logo  scale-125">
+								<Car size={36} weight="regular"  className='bg-[#1f1f1f] w-full h-full p-2'/>
 							</div>
 							<dl className="transfer-details">
 								<div>
@@ -104,14 +104,14 @@ export default function PaymentCom(){
 								- &#x20b9; 120
 							</div>
 						</div>
-						<div className="transfer  shadow bg-gray-800 p-4 rounded-lg">
-							<div className="transfer-logo">
-								<img src="/site/img/134187_taxi_car_icon.svg"  className="w-full h-full"/>
+						<div className="transfer  shadow bg-[#2e2e2e] p-4 rounded-lg">
+							<div className="transfer-logo  scale-125">
+								<Car size={36} weight="regular"  className='bg-[#1f1f1f] w-full h-full p-2'/>
 							</div>
 							<dl className="transfer-details">
 								<div>
 									<dt>Danny E</dt>
-									<dd>************2345</dd>
+									<dd>********2345</dd>
 								</div>
 								<div>
 									<dt>To : Chatikara</dt>

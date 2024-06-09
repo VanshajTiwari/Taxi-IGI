@@ -10,18 +10,16 @@ export default function AutoComeplete() {
     useEffect(()=>{
       async function fetchDataCountry(location=""){
           setlocationSuggestion(await getData(location));
-          console.log(locationSuggestion);
       }
       fetchDataCountry(keyword);
-      console.log(selectedLocation);
     },[keyword]);
   return (
     <div className="flex w-full">
       <div className="dropdown-field">
-              <input value={keyword} onChange={(e)=>setKeyword(e.target.value)} className="absolute max-w-[5px]"/>
-							<select className="max-w-[400px]" onChange={(e)=>{setSelectedLocation(JSON.parse(e.target.value))}}>
+              <input value={keyword} onChange={(e)=>setKeyword(e.target.value)} className=" max-w-[5px]"/>
+							<select className=" overflow-hidden" onChange={(e)=>{setSelectedLocation(JSON.parse(e.target.value))}}>
               {
-                locationSuggestion.map((e)=><option key={e.place_id} value={JSON.stringify(e)} className="absolute ">{e.display_name}</option>)
+                locationSuggestion.map((e)=><option key={e.place_id} value={JSON.stringify(e)} className="">{e.display_name}</option>)
               }
                 <option> </option>
 							</select>
