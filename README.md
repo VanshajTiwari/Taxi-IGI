@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# TAXI IGI
 
-## Getting Started
+Project Development Overview for TAXI IGI 🚖✨
 
-First, run the development server:
+I’m excited to share that I’m developing TAXI IGI, a full-stack application for taxi booking and ride-sharing. Here’s a brief overview of the project:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Technologies:
+- Next.js 14: For a scalable, high-performance app ⚙️🚀.
+- GraphQL: Optimized data fetching 📊⚡.
+- Redis: Enhanced speed with caching 🏎️💨.
+- Leaflet & Mapbox: Interactive maps and real-time tracking 🗺️📍.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Features:
+- Taxi Booking: Book taxis instantly or schedule for later 🚖🕒, with real-time tracking 📡👀.
+- Tour Booking: Browse and book tour packages 🌍📆, or customize your own 📝✈️.
+- Lift Sharing: Match with others going to the same destination 🚗👥 and share costs 💰.
+- Chatting & Voice Calling: Secure in-app chat 💬🔒 and anonymous voice calls 📞🙈 with drivers.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Backend:
+- GraphQL API: Efficient backend queries 🔄💻.
+- Redis Cache: Reduced latency with cached data 📉⚙️.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Map Integration:
+- Leaflet & Mapbox: High-quality, interactive maps 🗺️✨.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+User Experience:
+- Responsive Design: Optimal use on all devices 📱💻.
+- User-Friendly UI: Easy navigation and booking 🚦😊.
+- Security & Privacy: Integrating a voice calling feature that allows users to call drivers without disclosing their phone numbers, ensuring privacy and secure messaging 🔐📞.
